@@ -58,12 +58,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-1-4 hide-print">
-                    <h4>Get Involved!</h4>
-                    <p>Join one of over 500 student organizations to stay connected to campus, develop leadership skills, &amp; have fun!</p>
-                    <a href="http://uiowa.orgsync.com" class="orgsync-btn" target="_blank">Find and Manage Orgs in OrgSync</a>
-                    <p><a href="https://orgsync.com/sso_redirect/university-of-iowa" target="_blank">OrgSync Direct Sign In</a></p>
-                </div>
+			<div class="col-1-4 hide-print">
+				<h4>Get Involved!</h4>
+				<p>Join one of over 500 student organizations to stay connected to campus, develop leadership skills, & have fun!</p>
+				<a href="http://uiowa.orgsync.com" class="orgsync-btn" target="_blank">Learn about OrgSync</a>
+        <p><a href="https://orgsync.com/sso_redirect/university-of-iowa" target="_blank">Sign into OrgSync</a></p>
+
+			</div>
             </div>
             <hr>
             <p>© 2015 <a href="http://www.uiowa.edu/" target="_blank">The University of Iowa</a>. All Rights Reserved. <a href="http://www.uiowa.edu/homepage/online-privacy-information" target="_blank">Privacy Information</a></p>
@@ -87,18 +88,27 @@
     window.attachEvent("onload", downloadJSAtOnload);
     else window.onload = downloadJSAtOnload;
     </script>
+<script type="text/javascript">
+	(function(d) {
+	  var tkTimeout=3000;
+	  if(window.sessionStorage){if(sessionStorage.getItem('useTypekit')==='false'){tkTimeout=0;}}
+	  var config = {
+	    kitId: 'ivn3muh',
+	    scriptTimeout: tkTimeout
+	  },
+	  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+"wf-inactive";if(window.sessionStorage){sessionStorage.setItem("useTypekit","false")}},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+="wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+	</script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    try {
-        var pageTracker = _gat._getTracker("UA-1975314-11");
-        pageTracker._setDomainName(".orgsync.com");
-        pageTracker._trackPageview();
-    } catch (err) {}
-    </script>
+		  ga('create', 'UA-426753-49', 'uiowa.edu');
+		  ga('send', 'pageview');
+
+		</script>
 </body>
 
 </html>
